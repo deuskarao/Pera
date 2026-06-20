@@ -357,17 +357,13 @@ nav {
 /* ─── FOOTER ─── */
 footer {
   padding: 40px 48px; border-top: 1px solid var(--border);
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; align-items: center; justify-content: center;
 }
 
 .footer-brand {
   font-size: 14px; font-weight: 700; letter-spacing: 1.5px;
   color: var(--text-tertiary);
 }
-
-.footer-links { display: flex; gap: 24px; }
-.footer-links a { font-size: 12px; color: var(--text-tertiary); text-decoration: none; transition: color 0.2s; }
-.footer-links a:hover { color: var(--text-secondary); }
 
 /* ─── ANIMATIONS ─── */
 @keyframes fadeInUp {
@@ -397,7 +393,7 @@ footer {
   .hero-sub { font-size: 15px; }
   .hero-actions { flex-direction: column; width: 100%; max-width: 320px; }
   .btn { justify-content: center; }
-  footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 20px; }
+  footer { padding: 32px 20px; }
 }
 </style>
 </head>
@@ -600,13 +596,7 @@ footer {
 
 <!-- FOOTER -->
 <footer>
-  <span class="footer-brand">Vertex</span>
-  <div class="footer-links">
-    <a href="https://deuskarao.github.io/UniPulse/" target="_blank">UniPulse</a>
-    <a href="https://deuskarao.github.io/LifeOS/" target="_blank">LifeOS</a>
-    <a href="mailto:mustafa@example.com">İletişim</a>
-  </div>
-  <span style="font-size:11px;color:var(--text-tertiary)">© 2026 Vertex. Tüm hakları saklıdır.</span>
+  <span style="font-size:12px;color:var(--text-tertiary)">© 2026 Vertex. Tüm hakları saklıdır.</span>
 </footer>
 
 <script>
