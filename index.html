@@ -1353,12 +1353,15 @@ footer {
           // Outer glow
           for (var i = 1; i < pts.length; i++) {
             var t = i / pts.length;
-            var width = t * 30;
-            var alpha = t * 0.1;
+            var width = t * 40;
+            var alpha = t * 0.12;
+            var r = Math.round(59 + (16 - 59) * t);
+            var g = Math.round(130 + (185 - 130) * t);
+            var b = Math.round(246 + (129 - 246) * t);
             ctx.beginPath();
             ctx.moveTo(pts[i-1].x, pts[i-1].y);
             ctx.lineTo(pts[i].x, pts[i].y);
-            ctx.strokeStyle = 'rgba(59, 130, 246, ' + alpha + ')';
+            ctx.strokeStyle = 'rgba(' + r + ',' + g + ',' + b + ',' + alpha + ')';
             ctx.lineWidth = width;
             ctx.lineCap = 'round';
             ctx.stroke();
@@ -1367,12 +1370,15 @@ footer {
           // Inner line
           for (var i = 1; i < pts.length; i++) {
             var t = i / pts.length;
-            var width = t * 6;
+            var width = t * 8;
             var alpha = t * 0.5;
+            var r = Math.round(59 + (16 - 59) * t);
+            var g = Math.round(130 + (185 - 130) * t);
+            var b = Math.round(246 + (129 - 246) * t);
             ctx.beginPath();
             ctx.moveTo(pts[i-1].x, pts[i-1].y);
             ctx.lineTo(pts[i].x, pts[i].y);
-            ctx.strokeStyle = 'rgba(59, 130, 246, ' + alpha + ')';
+            ctx.strokeStyle = 'rgba(' + r + ',' + g + ',' + b + ',' + alpha + ')';
             ctx.lineWidth = width;
             ctx.lineCap = 'round';
             ctx.stroke();
@@ -1380,9 +1386,10 @@ footer {
 
           // Tip glow
           ctx.beginPath();
-          ctx.arc(pts[pts.length-1].x, pts[pts.length-1].y, 8, 0, Math.PI * 2);
-          var g = ctx.createRadialGradient(pts[pts.length-1].x, pts[pts.length-1].y, 0, pts[pts.length-1].x, pts[pts.length-1].y, 8);
+          ctx.arc(pts[pts.length-1].x, pts[pts.length-1].y, 12, 0, Math.PI * 2);
+          var g = ctx.createRadialGradient(pts[pts.length-1].x, pts[pts.length-1].y, 0, pts[pts.length-1].x, pts[pts.length-1].y, 12);
           g.addColorStop(0, 'rgba(59, 130, 246, 0.6)');
+          g.addColorStop(0.5, 'rgba(16, 185, 129, 0.3)');
           g.addColorStop(1, 'rgba(59, 130, 246, 0)');
           ctx.fillStyle = g;
           ctx.fill();
