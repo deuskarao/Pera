@@ -1318,6 +1318,7 @@ footer {
   /* ─── INTERACTIVE CANVAS BACKGROUND ─── */
   if (!reduceMotion) {
     (function () {
+      if (window.innerWidth < 768) return; // Disable on mobile for performance
       var canvas = document.getElementById('bgCanvas');
       if (!canvas) return;
       var ctx = canvas.getContext('2d');
